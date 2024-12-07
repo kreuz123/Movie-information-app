@@ -65,6 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
     fetchTheaters(); // Populate the theater dropdown
 });
 
+//Search
 document.getElementById("movie-search").addEventListener("input", async (e) => {
     const query = e.target.value.trim(); // Trim to remove extra spaces
     const searchResults = document.getElementById("search-results");
@@ -74,7 +75,7 @@ document.getElementById("movie-search").addEventListener("input", async (e) => {
             const response = await fetch(`http://www.omdbapi.com/?s=${query}&apikey=718d4f42`);
             const data = await response.json();
 
-            searchResults.innerHTML = ""; // 清空之前的搜尋結果
+            searchResults.innerHTML = ""; // clear searched result
 
             if (data.Search) {
                 data.Search.forEach(movie => {
@@ -88,17 +89,17 @@ document.getElementById("movie-search").addEventListener("input", async (e) => {
                     searchResults.appendChild(movieCard);
                 });
 
-                // 新增 Clear Search 按鈕
+                // add Clear Search button
                 const clearButton = document.createElement("button");
                 clearButton.textContent = "Clear Search";
               
 
                 clearButton.addEventListener("click", () => {
-                    searchResults.innerHTML = ""; // 清空搜尋結果
-                    e.target.value = ""; // 清空搜尋框
+                    searchResults.innerHTML = ""; // clearsearch result
+                    e.target.value = ""; // clean search 
                 });
 
-                searchResults.appendChild(clearButton); // 添加 Clear Search 按鈕到搜尋結果
+                searchResults.appendChild(clearButton); // add Clear Search button to search result 
             } else {
                 searchResults.innerHTML = "<p>No results found. Try a different search.</p>";
             }
