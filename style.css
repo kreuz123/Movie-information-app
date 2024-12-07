@@ -1,0 +1,72 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #333
+}
+
+header {
+    background-color: #333;
+    color: yellow;
+    text-align: center;
+    padding: 1em 0;
+}
+
+
+
+#controls {
+    text-align: center; /* 確保內部文字置中 */
+}
+
+#controls label, #controls select {
+    display: block; /* 將標籤和選單顯示為獨占行 */
+    margin: 0.5em auto; /* 垂直和水平居中 */
+    font-size: 1.1em; /* 增大字體 */
+    color: white;
+}
+
+#movie-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+#movie-search {
+    margin-bottom: 1em;      
+    padding: 10px;           
+    width: 80%;             
+    max-width: 400px;        
+    font-size: 1.1em;       
+}
+
+.clear-search-button {
+    margin-top: 1em;          /* 與搜尋結果保持距離 */
+    padding: 10px 20px;       /* 內邊距，調整按鈕大小 */
+    background-color: #333;   /* 背景顏色 */
+    color: white;             /* 字體顏色 */
+    border: none;             /* 移除邊框 */
+    border-radius: 8px;       /* 圓角設計 */
+    cursor: pointer;          /* 滑鼠樣式變為手形 */
+    font-size: 1em;           /* 調整文字大小 */
+}
+
+.movie {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 200px;
+    text-align: center;
+}
+
+.movie img {
+    max-width: 100%;
+}
+
+
+footer {
+    text-align: center;
+    padding: 1em 0;
+    background-color: #f4f4f4;
+    margin-top: 2em;
+}

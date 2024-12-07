@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Information App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Find Movie Information</h1>
+    </header>
+    <input type="text" id="movie-search" placeholder="Search for a movie...">
+    <div id="search-results"></div>
+    <main>
+        <section id="controls">
+            <label for="theater-select">Select Theater:</label>
+            <select id="theater-select"></select>
+        </section>
+        <section id="movies">
+            <div id="movie-list"></div>
+        </section>
+    </main>
+    <footer>
+        <p>Powered by Finnkino and OMDB API</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
