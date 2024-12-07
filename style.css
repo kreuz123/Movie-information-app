@@ -16,13 +16,13 @@ header {
 
 
 #controls {
-    text-align: center; /* 確保內部文字置中 */
+    text-align: center;
 }
 
 #controls label, #controls select {
-    display: block; /* 將標籤和選單顯示為獨占行 */
-    margin: 0.5em auto; /* 垂直和水平居中 */
-    font-size: 1.1em; /* 增大字體 */
+    display: block;
+    margin: 0.5em auto; 
+    font-size: 1.1em; 
     color: white;
 }
 
@@ -41,14 +41,14 @@ header {
 }
 
 .clear-search-button {
-    margin-top: 1em;          /* 與搜尋結果保持距離 */
-    padding: 10px 20px;       /* 內邊距，調整按鈕大小 */
-    background-color: #333;   /* 背景顏色 */
-    color: white;             /* 字體顏色 */
-    border: none;             /* 移除邊框 */
-    border-radius: 8px;       /* 圓角設計 */
-    cursor: pointer;          /* 滑鼠樣式變為手形 */
-    font-size: 1em;           /* 調整文字大小 */
+    margin-top: 1em;         
+    padding: 10px 20px;       
+    background-color: #333;  
+    color: white;             
+    border: none;             
+    border-radius: 8px;      
+    cursor: pointer;          
+    font-size: 1em;           
 }
 
 .movie {
