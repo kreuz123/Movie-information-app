@@ -65,17 +65,22 @@ document.addEventListener("DOMContentLoaded", () => {
     fetchTheaters(); // Populate the theater dropdown
 });
 
-//Search
+// Search 
 document.getElementById("movie-search").addEventListener("input", async (e) => {
-    const query = e.target.value.trim(); // Trim to remove extra spaces
+    const query = e.target.value.trim();
     const searchResults = document.getElementById("search-results");
 
     if (query.length > 2) {
         try {
-            const response = await fetch(`http://www.omdbapi.com/?s=${query}&apikey=718d4f42`);
+            const response = await fetch(`https://www.omdbapi.com/?s=${query}&apikey=718d4f42`);
             const data = await response.json();
 
-            searchResults.innerHTML = ""; // clear searched result
+            searchResults.innerHTML = ""; // clean search
+
+            if (data.Response === "False") {
+                searchResults.innerHTML = `<p>Error: ${data.Error}</p>`;
+                return;
+            }
 
             if (data.Search) {
                 data.Search.forEach(movie => {
@@ -89,17 +94,18 @@ document.getElementById("movie-search").addEventListener("input", async (e) => {
                     searchResults.appendChild(movieCard);
                 });
 
-                // add Clear Search button
-                const clearButton = document.createElement("button");
-                clearButton.textContent = "Clear Search";
-              
-
-                clearButton.addEventListener("click", () => {
-                    searchResults.innerHTML = ""; // clearsearch result
-                    e.target.value = ""; // clean search 
-                });
-
-                searchResults.appendChild(clearButton); // add Clear Search button to search result 
+                // Add clean search button
+                let clearButton = document.getElementById("clear-button");
+                if (!clearButton) {
+                    clearButton = document.createElement("button");
+                    clearButton.id = "clear-button";
+                    clearButton.textContent = "Clear Search";
+                    clearButton.addEventListener("click", () => {
+                        searchResults.innerHTML = ""; // 清空搜尋結果
+                        e.target.value = ""; // 清空搜尋框
+                    });
+                    searchResults.appendChild(clearButton);
+                }
             } else {
                 searchResults.innerHTML = "<p>No results found. Try a different search.</p>";
             }
@@ -109,4 +115,3 @@ document.getElementById("movie-search").addEventListener("input", async (e) => {
         }
     }
 });
-
