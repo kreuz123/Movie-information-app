@@ -22,4 +22,4 @@ Future improvements could include additional features, such as user profiles or 
 
 Project Links
 GitHub Repository: https://github.com/kreuz123/Movie-information-app
-Netlify Deployment: file:///Users/cchuang/Desktop/laurea/JS_Project2/index.html
+Netlify Deployment: https://findmovieforyou.netlify.app/
