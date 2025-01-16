@@ -1,6 +1,7 @@
 # Movie-information-app
 
-Developer Name: Chien Chuan Huang
+This is one of the assignments for the JavaScript course at Laurea UAS.
+
 Application Description
 Movie Information App
 This application is designed to help users search for movies and find information about them. The app includes the following features:
