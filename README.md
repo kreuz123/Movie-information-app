@@ -9,9 +9,6 @@ This application is designed to help users search for movies and find informatio
 *A functionality to search for movie screenings by specific cinemas. Users can find details about which cinemas are playing specific movies and the showtimes.
 *The app's color scheme is primarily gray, black, and yellow, inspired by the branding of Finnkino, creating a modern and cohesive user experience.
 
-Self-Evaluation
-According to the evaluation criteria, I would rate my project as being between Good and Very Good.
-
 Strengths:
 My project meets all the required functionality and features as outlined in the assignment.
 I successfully implemented a working search function and integrated a user-friendly clean search button.
